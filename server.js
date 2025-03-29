@@ -4,9 +4,13 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const path = require('path');
 const dotenv = require('dotenv');
+const connectDB = require('./config/db');
 
 // Load environment variables
 dotenv.config();
+
+// Connect to MongoDB
+connectDB();
 
 // Create Express app
 const app = express();

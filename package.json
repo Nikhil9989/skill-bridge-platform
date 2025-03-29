@@ -1,0 +1,48 @@
+{
+  "name": "skill-bridge-platform",
+  "version": "1.0.0",
+  "description": "Full-stack implementation of SKILL BRIDGE combining React frontend and backend services",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "install-client": "cd client && npm install",
+    "install-server": "npm install",
+    "install-all": "npm run install-server && npm run install-client",
+    "build-client": "cd client && npm run build",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run install-client && npm run build-client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nikhil9989/skill-bridge-platform.git"
+  },
+  "keywords": [
+    "skill-bridge",
+    "education",
+    "research",
+    "full-stack",
+    "react",
+    "node",
+    "express"
+  ],
+  "author": "Nikhil9989",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Nikhil9989/skill-bridge-platform/issues"
+  },
+  "homepage": "https://github.com/Nikhil9989/skill-bridge-platform#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.2.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.0"
+  }
+}
